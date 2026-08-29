@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Enable Account Plan Generator — No API Key</title>
+  <style>
+    :root{--ink:#1e2328;--muted:#66716f;--green:#39d353;--green2:#25a244;--paper:#fff;--bg:#f3f6f4;--line:#dce5df;--amber:#f59e0b;--red:#dc3545;--blue:#2878d0;--r:14px;--shadow:0 10px 28px rgba(30,35,40,.08)}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    button,input,select,textarea{font:inherit} button{cursor:pointer}.shell{max-width:1320px;margin:auto;padding:24px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:12px}.mark{width:42px;height:42px;border-radius:12px;background:var(--ink);display:grid;place-items:center;color:var(--green);font-weight:900;font-size:24px}.brand h1{font-size:20px;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:12px}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:9px;padding:9px 13px;font-weight:700}.btn:hover{border-color:#a9b9af}.btn.primary{background:var(--green);border-color:var(--green);color:#112016}.btn.dark{background:var(--ink);border-color:var(--ink);color:#fff}.btn.danger{color:var(--red)}.btn.sm{padding:6px 9px;font-size:12px}.tabs{display:flex;gap:4px;background:#e6ece8;border-radius:11px;padding:4px;width:max-content;margin-bottom:16px}.tab{border:0;background:transparent;padding:9px 16px;border-radius:8px;font-weight:800;color:var(--muted)}.tab.active{background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.07)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;margin-bottom:18px}.panel h2{font-size:15px;margin:0 0 14px}.field{grid-column:span 3}.field.wide{grid-column:span 6}.field.full{grid-column:1/-1}.field label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:800;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #cad6ce;border-radius:8px;padding:9px 10px;background:#fff;color:var(--ink)}.field textarea{resize:vertical;min-height:76px}.hint{color:var(--muted);font-size:12px}.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.push{margin-left:auto}.hidden{display:none!important}.status{padding:10px 12px;border-radius:9px;background:#eef8f0;border:1px solid #c9edcf;color:#1c6b30;font-weight:700;margin:12px 0}.status.error{background:#fff0f1;border-color:#ffc7cc;color:#a51d2b}.progress{height:8px;background:#e4ebe6;border-radius:999px;overflow:hidden}.progress>i{display:block;height:100%;background:var(--green);width:0;transition:.25s}.preview{max-height:220px;overflow:auto;border:1px solid var(--line);border-radius:9px}.preview table{width:100%;border-collapse:collapse;font-size:12px}.preview th,.preview td{text-align:left;padding:7px;border-bottom:1px solid var(--line);white-space:nowrap}.filters{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:16px 0}.filters input,.filters select{border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px}.plan{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);margin-bottom:16px;overflow:hidden}.plan-head{padding:16px 18px;display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--line)}.plan-title h3{margin:0 0 3px;font-size:18px}.plan-title .meta{color:var(--muted);font-size:12px}.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.chip{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border-radius:999px;background:#edf1ee;font-size:11px;font-weight:900}.chip.green{background:#ddf9e3;color:#166c2c}.chip.amber{background:#fff1cc;color:#8a5a00}.chip.red{background:#ffe0e3;color:#9f1d29}.chip.blue{background:#e1f0ff;color:#175a9d}.plan-tools{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.plan-body{padding:18px}.snapshot{display:grid;grid-template-columns:repeat(7,minmax(110px,1fr));gap:8px;margin-bottom:18px}.stat{background:#f6f8f7;border:1px solid #e4eae6;padding:9px;border-radius:9px}.stat small{display:block;color:var(--muted);text-transform:uppercase;font-size:9px;font-weight:900;letter-spacing:.06em}.stat b{display:block;margin-top:3px;font-size:12px}.sections{display:grid;grid-template-columns:1fr 1fr;gap:12px}.section{border:1px solid var(--line);border-radius:11px;padding:13px;min-width:0}.section.span{grid-column:1/-1}.section h4{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.05em}.edit{width:100%;min-height:86px;border:0;outline:0;resize:vertical;background:transparent;color:var(--ink);line-height:1.5}.cadence{display:grid;gap:9px}.touch{display:grid;grid-template-columns:70px 90px 1fr;gap:8px;border-top:1px solid var(--line);padding-top:9px}.touch:first-child{border-top:0;padding-top:0}.touch input,.touch textarea,.pov input,.pov textarea{width:100%;border:1px solid var(--line);border-radius:7px;padding:7px}.touch textarea{grid-column:3;min-height:70px}.touch .note{grid-column:3}.pov{display:grid;gap:8px}.empty{text-align:center;padding:54px 20px;color:var(--muted);border:1px dashed #bdc9c1;border-radius:var(--r);background:rgba(255,255,255,.55)}.draft{position:sticky;bottom:0;background:rgba(30,35,40,.95);color:#dce4df;text-align:center;padding:9px;font-size:11px;z-index:4}.modal{position:fixed;inset:0;background:rgba(18,22,20,.62);z-index:10;display:grid;place-items:center;padding:20px}.modal-box{background:#fff;border-radius:14px;max-width:900px;width:100%;max-height:88vh;overflow:auto;padding:20px;box-shadow:0 24px 80px rgba(0,0,0,.28)}.modal pre{white-space:pre-wrap;font-size:12px;background:#f3f5f4;padding:12px;border-radius:9px}.toast{position:fixed;right:18px;bottom:48px;background:var(--ink);color:#fff;padding:10px 13px;border-radius:9px;z-index:30;opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:none}
+    .mode-banner{margin:-6px 0 18px;background:#ddf9e3;border:2px solid var(--green);color:#145c27;border-radius:11px;padding:11px 14px;text-align:center;font-weight:900;letter-spacing:.03em}
+    @media(max-width:850px){.field,.field.wide{grid-column:span 6}.snapshot{grid-template-columns:repeat(3,1fr)}.sections{grid-template-columns:1fr}.section.span{grid-column:auto}.topbar{align-items:flex-start}.touch{grid-template-columns:60px 78px 1fr}}
+    @media(max-width:560px){.shell{padding:14px}.field,.field.wide{grid-column:1/-1}.snapshot{grid-template-columns:repeat(2,1fr)}.topbar{display:block}.top-actions{margin-top:12px}.plan-head{display:block}.plan-tools{margin:12px 0 0;justify-content:flex-start}.touch{grid-template-columns:1fr 1fr}.touch textarea,.touch .note{grid-column:1/-1}}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <header class="topbar">
+    <div class="brand"><div class="mark">E</div><div><h1>Account Plan Generator</h1><p>Qualification, routing, research and outreach in one workspace</p></div></div>
+    <div class="top-actions"><button class="btn" id="configBtn">Rules & setup</button><button class="btn" id="csvExport">Export all CSV</button><button class="btn danger" id="clearBtn">Clear plans</button></div>
+  </header>
+  <div class="mode-banner">NO API KEY · COPY PROMPT TO CHATGPT · PASTE JSON BACK · BUILD 3</div>
+
+  <div class="tabs"><button class="tab active" data-tab="single">Single account</button><button class="tab" data-tab="batch">Batch CSV</button></div>
+  <section class="panel" id="singlePane">
+    <h2>Account inputs</h2>
+    <form id="accountForm" class="grid">
+      <div class="field"><label>Company *</label><input name="company" required placeholder="Acme Group"></div>
+      <div class="field"><label>Website / domain</label><input name="domain" placeholder="acme.com"></div>
+      <div class="field"><label>Country / HQ</label><input name="hq" placeholder="United Kingdom"></div>
+      <div class="field"><label>Annual revenue</label><input name="revenue" placeholder="£620m"></div>
+      <div class="field"><label>Employees</label><input name="employees" placeholder="4,200"></div>
+      <div class="field"><label>Industry</label><input name="industry" placeholder="Building materials"></div>
+      <div class="field"><label>Salesforce status</label><input name="sfStatus" placeholder="Prospect"></div>
+      <div class="field"><label>Existing customer?</label><select name="existing"><option>Unknown</option><option>No</option><option>Yes</option></select></div>
+      <div class="field"><label>Persona</label><select name="persona"><option value="">AI selects</option><option>Finance</option><option>Commercial</option><option>Sales</option><option>IT / Transformation</option><option>C-suite</option></select></div>
+      <div class="field"><label>Contact name</label><input name="contactName"></div>
+      <div class="field"><label>Contact title</label><input name="contactTitle"></div>
+      <div class="field wide"><label>LinkedIn profile / person notes</label><textarea name="linkedin" placeholder="Paste public professional information or your own notes"></textarea></div>
+      <div class="field wide"><label>Additional research / account context</label><textarea name="notes" placeholder="Paste CRM notes, known triggers, ERP, current tools, sources…"></textarea></div>
+      <div class="field full"><label>Enable evidence / approved source pack</label><textarea name="sourcePack" placeholder="Paste approved ICP rules, territory guidance, customer-story wording or proof points here. GPT will treat this as supplied evidence and will not strengthen the claims."></textarea></div>
+      <div class="field"><label>Signed as</label><input name="sigName" value="Hugh McHugh"></div>
+      <div class="field"><label>Job title</label><input name="sigTitle" placeholder="Account Executive"></div>
+      <div class="field"><label>Mobile</label><input name="sigMobile"></div>
+      <div class="field full row"><button class="btn primary" type="submit">Create GPT prompt</button><span class="hint">No API key. Copy the prompt to ChatGPT, then paste the JSON result back.</span></div>
+    </form>
+    <div id="singleStatus"></div>
+  </section>
+
+  <section class="panel hidden" id="batchPane">
+    <div class="row"><h2>Batch accounts</h2><span class="push hint">Maximum 20 rows · runs sequentially</span></div>
+    <div class="grid">
+      <div class="field full"><label>Upload CSV</label><input id="csvFile" type="file" accept=".csv,text/csv"></div>
+      <div class="field full"><label>Or paste CSV</label><textarea id="csvText" rows="7" placeholder="Company,Website,Country,Revenue,Employees,Industry,Persona,Notes"></textarea></div>
+      <div class="field full row"><button class="btn" id="previewBtn" type="button">Preview rows</button><button class="btn primary" id="batchRun" type="button" disabled>Start prompt batch</button></div>
+    </div>
+    <div id="batchPreview"></div><div id="batchStatus"></div>
+  </section>
+
+  <div class="filters" id="filters">
+    <input id="search" placeholder="Search plans…">
+    <select id="badgeFilter"><option value="">All badges</option><option>Green</option><option>Amber</option><option>Red</option></select>
+    <select id="routeFilter"><option value="">All routes</option><option>Enable SR</option><option>Enable CR</option><option>Enable SR + CR</option><option>Flintfox</option><option>Flintfox + Enable CR</option><option>Not a Fit</option><option>Existing Customer</option><option>BDR-Only</option></select>
+    <select id="icpFilter"><option value="">All ICP statuses</option><option>ICP YES</option><option>BDR-ONLY</option></select>
+    <span class="push hint" id="count"></span>
+  </div>
+  <section id="plans"></section>
+</main>
+
+<div class="modal hidden" id="configModal"><div class="modal-box"><div class="row"><h2>Rules & setup</h2><button class="btn push" id="closeConfig">Close</button></div>
+  <p class="hint">These arrays are intentionally visible. Add your complete territory, Salesforce override and defunct-company lists here; the original brief did not include them.</p>
+  <div class="grid">
+    <div class="field wide"><label>In-territory HQ countries (one per line)</label><textarea id="territories" rows="8"></textarea></div>
+    <div class="field wide"><label>Defunct companies (one per line)</label><textarea id="defunct" rows="8"></textarea></div>
+    <div class="field wide"><label>Manufacturer overrides (one per line)</label><textarea id="manufacturers" rows="8"></textarea></div>
+    <div class="field wide"><label>SR overrides (one per line)</label><textarea id="srOverrides" rows="8"></textarea></div>
+    <div class="field full row"><button class="btn primary" id="saveConfig">Save rules</button><button class="btn" id="showPrompt">View AI contract</button></div>
+  </div><pre id="promptView" class="hidden"></pre>
+</div></div>
+<div class="modal hidden" id="gptModal"><div class="modal-box"><div class="row"><div><h2 id="gptTitle">Generate in ChatGPT</h2><p class="hint" id="gptProgress"></p></div><button class="btn push" id="closeGPT">Close</button></div>
+  <p><b>1.</b> Copy the prompt. <b>2.</b> Open ChatGPT and paste it. <b>3.</b> Paste ChatGPT’s complete JSON answer below.</p>
+  <div class="field full"><label>Prompt</label><textarea id="gptPrompt" rows="12" readonly></textarea></div>
+  <div class="row" style="margin:10px 0"><button class="btn primary" id="copyGPT">Copy prompt</button><a class="btn" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT</a></div>
+  <div class="field full"><label>ChatGPT JSON answer</label><textarea id="gptResponse" rows="11" placeholder='Paste the complete JSON object here, beginning with { and ending with }'></textarea></div>
+  <div class="row" style="margin-top:10px"><button class="btn primary" id="importGPT">Import plan</button><button class="btn" id="skipGPT">Skip this account</button></div>
+  <div id="gptStatus"></div>
+</div></div>
+<div class="toast" id="toast"></div>
+<footer class="draft">AI-generated draft. Verify company facts, routing and contact information before use.</footer>
+
+<script>
+(() => {
+  'use strict';
+  const APP_KEY='enable-account-planner-v2';
+  const DEFAULT_CONFIG={
+    territories:['United Kingdom','Ireland','Netherlands','Belgium','Luxembourg','France','Germany','Austria','Switzerland','Denmark','Norway','Sweden','Finland'],
+    defunct:[],
+    manufacturers:['Twinings','Reckitt'],
+    srOverrides:['SPAR','MWI'],
+    existingCustomers:['Huws Gray','Knauf UK'],
+    nrIndustries:['public sector','government','law firm','legal services','saas','software as a service','financial services','banking','insurance'],
+    icpRevenueGBP:350000000,
+    model:'gpt-5.6',
+    webSearch:true
+  };
+  const state=load(); let batchRows=[]; let busy=false; let pendingGPT=null; let batchQueue=[]; let batchIndex=0; let batchImported=0;
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  function load(){try{return Object.assign({plans:[],config:DEFAULT_CONFIG},JSON.parse(localStorage.getItem(APP_KEY)||'{}'))}catch{return {plans:[],config:DEFAULT_CONFIG}}}
+  state.config=Object.assign({},DEFAULT_CONFIG,state.config||{});
+  function save(){try{localStorage.setItem(APP_KEY,JSON.stringify(state))}catch(e){console.warn('Browser storage unavailable for this local file',e)}}
+  const esc=s=>String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  const text=v=>Array.isArray(v)?v.join('\n• '):String(v??'Unknown');
+  const lines=v=>String(v||'').split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  function toast(msg){const el=$('#toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1800)}
+  function id(){return crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2)}
+  function normalizeName(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'')}
+  function moneyToNumber(v){let s=String(v||'').toLowerCase().replace(/[,£$€\s]/g,'');let n=parseFloat(s)||0;if(s.includes('bn')||/\d+b$/.test(s))n*=1e9;else if(s.includes('m'))n*=1e6;else if(s.includes('k'))n*=1e3;return n}
+  function includesName(list,name){const n=normalizeName(name);return list.some(x=>n.includes(normalizeName(x))||normalizeName(x).includes(n))}
+  function prequal(a){
+    const c=state.config, industry=(a.industry||'').toLowerCase(), hq=(a.hq||'').toLowerCase();
+    const existing=a.existing==='Yes'||includesName(c.existingCustomers,a.company);
+    const dead=includesName(c.defunct,a.company);
+    const nr=c.nrIndustries.some(x=>industry.includes(x));
+    const manufacturer=includesName(c.manufacturers,a.company)||/manufactur|building material/.test(industry);
+    const forcedSR=includesName(c.srOverrides,a.company)||/hotel|hospitality/.test(industry);
+    const inTerritory=!a.hq||c.territories.some(x=>hq.includes(x.toLowerCase()));
+    const revenue=moneyToNumber(a.revenue), icp=revenue>=c.icpRevenueGBP?'ICP YES':'BDR-ONLY';
+    let route='Enable CR', reason='Commercial complexity suggests a CR-led discovery motion.';
+    if(dead){route='Not a Fit';reason='The company is listed as defunct.'}
+    else if(existing){route='Existing Customer';reason='Existing-customer rules override net-new routing.'}
+    else if(nr){route='Not a Fit';reason='The supplied industry is on the non-relevant sector list.'}
+    else if(forcedSR){route='Enable SR';reason='An SR override or hotel/hospitality rule applies.'}
+    else if(manufacturer){route='Flintfox + Enable CR';reason='Manufacturer/building-material rules make Flintfox primary, with CR as the adjacent motion.'}
+    else if(revenue&&revenue<c.icpRevenueGBP){route='BDR-Only';reason='Reported revenue is below the £350m ICP threshold.'}
+    return {existing,dead,nr,manufacturer,forcedSR,inTerritory,icp,route,reason};
+  }
+  function accountFromForm(){return Object.fromEntries(new FormData($('#accountForm')).entries())}
+  function contract(a,q){return `You are a rigorous B2B account strategist for Enable and Flintfox. Return ONLY valid JSON. Do not use markdown. Never invent facts. Mark every material claim Supplied, Verified, Inferred, or Unknown.\n\nACCOUNT INPUT:\n${JSON.stringify(a)}\n\nPREQUALIFICATION (mandatory; explicit rules override inference):\n${JSON.stringify(q)}\n\nSOURCE VALIDATION:\n- Use the pasted Enable sourcePack as approved supplied evidence. Do not strengthen or expand its claims.\n- Use current public web sources to validate company identity, revenue, employees, industry, HQ, ERP/technology and triggers. Include direct URLs.\n- Never label a fact Verified without a named supporting source. Flag conflicts and mark inaccessible facts Unknown.\n- Internal Enable-library material is available only when pasted into sourcePack.\n\nRULES:\n- Health Green only with strong ICP match and a credible trigger within 12 months; Amber for plausible but unverified fit; Red for clearly wrong model, defunct, or existing-customer/different-motion cases.\n- Very Group and Travis Perkins may be described only as finding “significant missing and unclaimed rebate value”; no figures.\n- Exact ROI wording: “Customers typically see 200–400% ROI”.\n- Flintfox-routed messages use no unsupported proof point.\n- Create 5–7 touches over 3–5 weeks, mix email and LinkedIn, at most one SMS, distinct angle per step, and a polite breakup. Wider C-suite spacing; avoid month-end for Finance.\n- Personal references must use only pasted professional information and at most one light reference per email.\n\nJSON SHAPE:\n{"badge":"Green|Amber|Red","badgeReason":"","persona":"","personaAISelected":true,"erp":"Unknown","snapshot":"","situation":"","evidence":[""],"validationSummary":"","sources":["Source title | URL or supplied source | supported claim | status"],"why":[""],"routingRationale":"","competitiveLandscape":"","stakeholders":"","risks":"","discoveryQuestions":[""],"nextAction":"","plan306090":{"30":"","60":"","90":""},"checklist":[""],"flags":[""],"cadence":[{"day":1,"channel":"Email|LinkedIn|SMS","objective":"","angle":"","subject":"","body":"","timingNote":""}],"pov":{"summary":"","talkingPoints":[""],"emailSubject":"","emailBody":""}}`}
+  function extractJSON(raw){let s=String(raw||'').trim().replace(/^```(?:json)?/i,'').replace(/```$/,'').trim();const a=s.indexOf('{'),b=s.lastIndexOf('}');if(a<0||b<a)throw Error('No JSON object returned');return JSON.parse(s.slice(a,b+1))}
+  async function copyText(value){
+    try{await navigator.clipboard.writeText(value)}catch{const el=document.createElement('textarea');el.value=value;el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.focus();el.select();document.execCommand('copy');el.remove()}
+  }
+  function demoPlan(a,q){
+    const fit=q.icp==='ICP YES', unknown=!a.notes;
+    const badge=q.dead||q.nr||q.existing?'Red':fit&&!unknown?'Green':'Amber';
+    const persona=a.persona||(/manufactur|building/i.test(a.industry||'')?'Commercial':'Finance');
+    const sig=[a.sigName,a.sigTitle,a.sigMobile].filter(Boolean).join('\n');
+    const base=`Hi ${a.contactName||'there'},\n\nI noticed ${a.company} is ${a.industry?'operating in '+a.industry:'reviewing commercial operations'}. Teams with complex pricing or rebate processes often struggle to see leakage and accrual risk early enough.\n\nWould a short conversation to compare your current process be useful?\n\n${sig}`;
+    return {badge,badgeReason:badge==='Green'?'Strong reported ICP fit with supplied account context; validate the trigger date.':badge==='Red'?q.reason:'Plausible fit, but key facts and timing remain unverified.',persona,personaAISelected:!a.persona,erp:'Unknown',snapshot:`${a.company} is a ${a.industry||'not-yet-classified'} account. Revenue, ERP and commercial complexity should be verified before outreach. [Supplied/Unknown]`,situation:'Assess the scale, ownership and visibility of pricing, rebates and channel incentives. Confirm whether value leakage, manual accruals or fragmented ERP processes create executive urgency. [Inferred]',evidence:[a.notes?`${a.notes} [Supplied]`:'No research evidence supplied. [Unknown]'],validationSummary:'No live source validation was performed for this minimal rule-based result.',sources:a.sourcePack?['Pasted Enable source pack | supplied evidence | not independently verified']:[],why:[q.manufacturer?'Flintfox can address pricing complexity common in manufacturing environments. [Inferred]':'Enable may improve control and visibility across rebate processes. [Inferred]','A structured discovery can quantify leakage, manual effort and accrual risk. [Inferred]','Customers typically see 200–400% ROI; applicability must be validated. [Supplied wording]'],routingRationale:`${q.reason} Treat this as a working route until business model and ownership are confirmed.`,competitiveLandscape:'Validate whether SAP-native tools, Vistex, Vendavo, spreadsheets or internally built workflows are in place. Win on time-to-value, usability, visibility and measurable process control—not unsupported feature claims. [Inferred]',stakeholders:`Prioritise ${persona}, then identify Commercial, Sales Operations, IT/Transformation and an executive sponsor. Names are unknown.`,risks:'Wrong route, insufficient scale, no active trigger, entrenched ERP workflow, or an existing initiative. Validate before sequencing.',discoveryQuestions:['How are rebates or pricing agreements recorded and reconciled today?','Where does leakage or forecast uncertainty appear?','Who owns the business case and technical evaluation?','What change or deadline makes this important now?'],nextAction:'Verify revenue, ERP, ownership and a trigger from the last 12 months; then send the first touch.',plan306090:{30:'Validate fit, map stakeholders and confirm a quantified problem.',60:'Run discovery, document current-state process and align on success criteria.',90:'Agree business case, evaluation plan, owners and decision milestones.'},checklist:['Confirm HQ and territory','Verify revenue and employee count','Identify ERP and current tooling','Validate a recent trigger','Map at least three stakeholders','Personalise and approve first touch'],flags:[!q.inTerritory?'TERRITORY FLAG':null,q.icp,q.existing?'EXISTING CUSTOMER':null].filter(Boolean),cadence:[
+      {day:1,channel:'Email',objective:'Open discovery',angle:'Visibility and leakage',subject:`A question about ${a.company}'s commercial process`,body:base,timingNote:persona==='Finance'?'Send mid-month, Tuesday–Thursday morning.':'Send Tuesday–Thursday morning.'},
+      {day:4,channel:'LinkedIn',objective:'Build familiarity',angle:'Relevant operational observation',subject:'Connection note',body:`Hi ${a.contactName||'there'} — I work with teams improving visibility across complex pricing and rebate processes. Thought it could be useful to connect.`,timingNote:'Keep the note low-pressure.'},
+      {day:8,channel:'Email',objective:'Add a new reason to reply',angle:'Forecast accuracy and control',subject:`Reducing commercial blind spots at ${a.company}`,body:`Hi ${a.contactName||'there'},\n\nA second angle: finance and commercial teams often discover that forecast uncertainty is caused by disconnected agreement, claim and ERP data.\n\nIs this already well controlled at ${a.company}, or worth a quick benchmark?\n\n${sig}`,timingNote:'Avoid month-end for Finance.'},
+      {day:14,channel:'LinkedIn',objective:'Share a discovery hook',angle:'Ownership',subject:'Follow-up',body:'Curious whether pricing/rebate process improvement sits with Finance, Commercial, or Transformation in your team?',timingNote:'Send only if connected.'},
+      {day:22,channel:'Email',objective:'Close the loop',angle:'Polite breakup',subject:'Close the loop?',body:`Hi ${a.contactName||'there'},\n\nI may have the timing or ownership wrong, so I’ll close the loop for now. If improving control over pricing or rebate processes becomes a priority, I’d be happy to compare notes.\n\n${sig}`,timingNote:'Final touch; do not create false urgency.'}
+    ],pov:{summary:`Based only on the supplied title and notes, ${persona} is the most relevant working persona. Their likely focus is measurable control, decision confidence and execution risk, but these priorities remain inferred until validated. Lead with the operating problem, not product features. Keep the opening specific to ${a.company} and ask a diagnostic question. Avoid implying knowledge beyond the supplied professional information.`,talkingPoints:['Visibility into value leakage and exposure','Ownership and effort across the current process','A measurable path from discovery to business case'],emailSubject:`A ${persona.toLowerCase()} question for ${a.company}`,emailBody:base}};
+  }
+  function validatePlan(p){if(!p||!['Green','Amber','Red'].includes(p.badge)||!Array.isArray(p.cadence))throw Error('AI response did not match the required plan schema');return p}
+  function finish(a,q,p,minimal){
+    const now=new Date().toISOString(); return {id:id(),key:normalizeName(a.company),createdAt:now,updatedAt:now,input:a,qual:q,data:p,minimal,error:false};
+  }
+  function commitPlan(a,q,data){
+    const old=state.plans.findIndex(p=>p.key===normalizeName(a.company));
+    if(old>=0&&!confirm(`Replace the existing ${a.company} plan?`))return false;
+    const p=finish(a,q,data,false);if(old>=0){p.id=state.plans[old].id;state.plans.splice(old,1,p)}else state.plans.unshift(p);save();render();return true;
+  }
+  function openPlanPrompt(a,fromBatch=false){
+    const q=prequal(a);pendingGPT={kind:'plan',a,q,fromBatch};
+    $('#gptTitle').textContent='Generate '+a.company+' in ChatGPT';
+    $('#gptProgress').textContent=fromBatch?`Batch account ${batchIndex+1} of ${batchQueue.length}`:'Single account';
+    $('#gptPrompt').value=contract(a,q);$('#gptResponse').value='';$('#gptStatus').innerHTML='';$('#gptModal').classList.remove('hidden');
+  }
+  function openPovPrompt(p){
+    pendingGPT={kind:'pov',planId:p.id,fromBatch:false};$('#gptTitle').textContent='Generate Persona PoV in ChatGPT';$('#gptProgress').textContent=p.input.company;
+    $('#gptPrompt').value=`Return ONLY valid JSON with this shape: {"summary":"","talkingPoints":["","",""],"emailSubject":"","emailBody":""}. Ground everything strictly in the supplied professional information. Do not infer private or sensitive facts. Use at most one light reference to the person's background. Account: ${JSON.stringify(p.input)} Persona: ${p.data.persona}`;
+    $('#gptResponse').value='';$('#gptStatus').innerHTML='';$('#gptModal').classList.remove('hidden');
+  }
+  function nextBatchPrompt(){
+    batchIndex++;if(batchIndex<batchQueue.length){openPlanPrompt(batchQueue[batchIndex],true)}else{$('#gptModal').classList.add('hidden');$('#batchStatus').innerHTML=`<div class="status">Batch finished: ${batchImported} of ${batchQueue.length} plans imported.</div><div class="progress"><i style="width:100%"></i></div>`;pendingGPT=null;batchQueue=[];batchIndex=0;batchImported=0}
+  }
+  function chip(label,kind=''){return `<span class="chip ${kind}">${esc(label)}</span>`}
+  function editable(label,key,value,span=false){return `<div class="section ${span?'span':''}"><h4>${esc(label)}</h4><textarea class="edit" data-key="${esc(key)}">${esc(text(value))}</textarea></div>`}
+  function render(){
+    const q=$('#search').value.toLowerCase(),bf=$('#badgeFilter').value,rf=$('#routeFilter').value,ifv=$('#icpFilter').value;
+    const shown=state.plans.filter(p=>(!q||JSON.stringify(p).toLowerCase().includes(q))&&(!bf||p.data.badge===bf)&&(!rf||p.qual.route===rf)&&(!ifv||p.qual.icp===ifv));
+    $('#count').textContent=`${shown.length} of ${state.plans.length} plans`;
+    $('#plans').innerHTML=shown.length?shown.map(planHTML).join(''):'<div class="empty"><b>No account plans yet.</b><br>Enter an account above or import a CSV batch.</div>';
+  }
+  function planHTML(p){const a=p.input,d=p.data,q=p.qual;const kind=d.badge.toLowerCase();return `<article class="plan" data-id="${p.id}">
+    <div class="plan-head"><div class="plan-title"><h3>${esc(a.company)}</h3><div class="meta">${esc(a.domain||'No domain')} · Updated ${new Date(p.updatedAt).toLocaleString()}</div><div class="badges">${chip('● '+d.badge,kind)}${chip(q.icp,q.icp==='ICP YES'?'green':'amber')}${chip(q.inTerritory?'TERRITORY IN':'TERRITORY FLAG',q.inTerritory?'':'amber')}${chip(q.route,'blue')}${q.existing?chip('EXISTING CUSTOMER','red'):''}</div></div>
+    <div class="plan-tools"><button class="btn sm" data-action="collapse">Collapse</button><button class="btn sm" data-action="copy">Copy all</button><button class="btn sm" data-action="word">Word</button><button class="btn sm" data-action="duplicate">Duplicate</button><button class="btn sm danger" data-action="delete">Delete</button></div></div>
+    <div class="plan-body"><div class="snapshot">${[['Revenue',a.revenue],['Employees',a.employees],['ERP',d.erp],['Industry',a.industry],['HQ',a.hq],['Persona',d.persona+(d.personaAISelected?' (AI)':'')],['Next action',d.nextAction]].map(x=>`<div class="stat"><small>${x[0]}</small><b>${esc(x[1]||'Unknown')}</b></div>`).join('')}</div>
+    <div class="sections">${editable('Executive snapshot','snapshot',d.snapshot)}${editable('Situation & priorities','situation',d.situation)}${editable('Evidence & source notes','evidence',d.evidence)}${editable('Validation summary','validationSummary',d.validationSummary||'No independent validation recorded.')} ${editable('Sources used','sources',d.sources||[],true)}${editable('Why Enable / Flintfox','why',d.why)}${editable('Routing rationale','routingRationale',d.routingRationale)}${editable('Competitive landscape','competitiveLandscape',d.competitiveLandscape)}${editable('Stakeholders','stakeholders',d.stakeholders)}${editable('Risks & objections','risks',d.risks)}${editable('Discovery questions','discoveryQuestions',d.discoveryQuestions)}${editable('Flags','flags',d.flags)}
+    <div class="section span"><h4>30 / 60 / 90 plan</h4><div class="grid"><div class="field"><label>30 days</label><textarea class="edit" data-key="plan306090.30">${esc(d.plan306090?.['30'])}</textarea></div><div class="field"><label>60 days</label><textarea class="edit" data-key="plan306090.60">${esc(d.plan306090?.['60'])}</textarea></div><div class="field"><label>90 days</label><textarea class="edit" data-key="plan306090.90">${esc(d.plan306090?.['90'])}</textarea></div></div></div>
+    ${editable('Execution checklist','checklist',d.checklist,true)}
+    <div class="section span"><h4>Multi-touch cadence</h4><div class="cadence">${(d.cadence||[]).map((t,i)=>`<div class="touch" data-touch="${i}"><input aria-label="Day" data-tkey="day" value="${esc(t.day)}"><select aria-label="Channel" data-tkey="channel">${['Email','LinkedIn','SMS'].map(c=>`<option ${t.channel===c?'selected':''}>${c}</option>`).join('')}</select><input aria-label="Subject" data-tkey="subject" value="${esc(t.subject)}" placeholder="Subject"><input aria-label="Objective" data-tkey="objective" value="${esc(t.objective)}" placeholder="Objective"><input aria-label="Angle" data-tkey="angle" value="${esc(t.angle)}" placeholder="Angle"><textarea data-tkey="body">${esc(t.body)}</textarea><input class="note" aria-label="Timing note" data-tkey="timingNote" value="${esc(t.timingNote)}" placeholder="Timing note"></div>`).join('')}</div></div>
+    <div class="section span"><h4>Persona PoV</h4><div class="pov"><textarea data-pov="summary" rows="5">${esc(d.pov?.summary)}</textarea><textarea data-pov="talkingPoints" rows="3">${esc(text(d.pov?.talkingPoints))}</textarea><input data-pov="emailSubject" value="${esc(d.pov?.emailSubject)}"><textarea data-pov="emailBody" rows="6">${esc(d.pov?.emailBody)}</textarea><div class="row"><button class="btn sm" data-action="regenPov">Generate PoV</button><button class="btn sm" data-action="applyFirst">Apply to first touch</button><button class="btn sm" data-action="applyFollow">Apply to follow-up</button></div></div></div>
+    </div></div></article>`}
+  function setPath(obj,path,val){const parts=path.split('.');let x=obj;while(parts.length>1){x=x[parts.shift()]??={}}x[parts[0]]=val}
+  function planText(p){const d=p.data;return `${p.input.company}\nBadge: ${d.badge} — ${d.badgeReason}\nRoute: ${p.qual.route}\nICP: ${p.qual.icp}\n\nSNAPSHOT\n${d.snapshot}\n\nSITUATION\n${d.situation}\n\nVALIDATION\n${d.validationSummary||'No independent validation recorded.'}\n\nSOURCES\n• ${text(d.sources||[])}\n\nWHY ENABLE / FLINTFOX\n• ${text(d.why)}\n\nROUTING\n${d.routingRationale}\n\nCOMPETITION\n${d.competitiveLandscape}\n\nSTAKEHOLDERS\n${d.stakeholders}\n\nRISKS\n${d.risks}\n\nDISCOVERY\n• ${text(d.discoveryQuestions)}\n\n30/60/90\n30: ${d.plan306090?.['30']}\n60: ${d.plan306090?.['60']}\n90: ${d.plan306090?.['90']}\n\nCADENCE\n${(d.cadence||[]).map(t=>`Day ${t.day} · ${t.channel}\n${t.subject}\n${t.body}\nTiming: ${t.timingNote}`).join('\n\n')}\n\nPERSONA POV\n${d.pov?.summary}\n• ${text(d.pov?.talkingPoints)}`}
+  function download(name,content,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
+  function wordExport(p){const html=`<html><head><meta charset="utf-8"><style>body{font-family:Arial;color:#1e2328;line-height:1.45}h1{border-bottom:4px solid #39d353}h2{margin-top:24px}</style></head><body><h1>${esc(p.input.company)} — Account Plan</h1><pre style="white-space:pre-wrap;font-family:Arial">${esc(planText(p))}</pre></body></html>`;download(`${p.input.company.replace(/\W+/g,'_')}_Account_Plan.doc`,html,'application/msword')}
+  function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+  function exportCSV(){const rows=[['Company','Badge','ICP status','Territory status','Route','Next step','First-touch subject','First-touch body'],...state.plans.map(p=>[p.input.company,p.data.badge,p.qual.icp,p.qual.inTerritory?'IN':'FLAG',p.qual.route,p.data.nextAction,p.data.cadence?.[0]?.subject,p.data.cadence?.[0]?.body])];download('Enable_Account_Plans.csv',rows.map(r=>r.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8')}
+  function parseCSV(src){const out=[];let row=[],cell='',quote=false;for(let i=0;i<src.length;i++){const c=src[i],n=src[i+1];if(c==='"'&&quote&&n==='"'){cell+='"';i++}else if(c==='"')quote=!quote;else if(c===','&&!quote){row.push(cell);cell=''}else if((c==='\n'||c==='\r')&&!quote){if(c==='\r'&&n==='\n')i++;row.push(cell);if(row.some(x=>x.trim()))out.push(row);row=[];cell=''}else cell+=c}row.push(cell);if(row.some(x=>x.trim()))out.push(row);if(out.length<2)return[];const h=out.shift().map(x=>x.trim().toLowerCase());return out.slice(0,20).map(r=>Object.fromEntries(h.map((k,i)=>[k,r[i]?.trim()||''])))}
+  function mapRow(r){const get=(...ks)=>{for(const k of ks)if(r[k]!=null)return r[k];return''};return {company:get('company','account','account name'),domain:get('website','domain'),hq:get('country','hq','headquarters'),revenue:get('revenue','annual revenue'),employees:get('employees','employee count'),industry:get('industry','vertical'),sfStatus:get('salesforce status','sf status','status'),existing:get('existing customer','existing')||'Unknown',persona:get('persona'),contactName:get('contact name','name'),contactTitle:get('contact title','title'),linkedin:get('linkedin','linkedin profile','person notes'),notes:get('notes','research','context'),sourcePack:get('source pack','enable evidence','approved evidence'),sigName:$('[name=sigName]').value,sigTitle:$('[name=sigTitle]').value,sigMobile:$('[name=sigMobile]').value}}
+  $$('.tab').forEach(b=>b.onclick=()=>{$$('.tab').forEach(x=>x.classList.toggle('active',x===b));$('#singlePane').classList.toggle('hidden',b.dataset.tab!=='single');$('#batchPane').classList.toggle('hidden',b.dataset.tab!=='batch')});
+  $('#accountForm').onsubmit=e=>{e.preventDefault();openPlanPrompt(accountFromForm(),false);$('#singleStatus').innerHTML='<div class="status">Prompt ready. Copy it to ChatGPT and paste the JSON answer back.</div>'};
+  $('#csvFile').onchange=async e=>{if(e.target.files[0])$('#csvText').value=await e.target.files[0].text()};
+  $('#previewBtn').onclick=()=>{batchRows=parseCSV($('#csvText').value).map(mapRow).filter(r=>r.company);$('#batchRun').disabled=!batchRows.length;$('#batchPreview').innerHTML=batchRows.length?`<div class="preview"><table><thead><tr><th>#</th><th>Company</th><th>Industry</th><th>Revenue</th><th>Persona</th></tr></thead><tbody>${batchRows.map((r,i)=>`<tr><td>${i+1}</td><td>${esc(r.company)}</td><td>${esc(r.industry)}</td><td>${esc(r.revenue)}</td><td>${esc(r.persona||'AI selects')}</td></tr>`).join('')}</tbody></table></div>`:'<div class="status error">No usable rows found. Include a Company column.</div>'};
+  $('#batchRun').onclick=()=>{if(!batchRows.length)return;batchQueue=batchRows.map(x=>({...x}));batchIndex=0;batchImported=0;$('#batchStatus').innerHTML=`<div class="status">Batch ready: copy and import ${batchQueue.length} prompts one at a time.</div>`;openPlanPrompt(batchQueue[0],true)};
+  $('#plans').addEventListener('input',e=>{const card=e.target.closest('.plan');if(!card)return;const p=state.plans.find(x=>x.id===card.dataset.id);if(e.target.dataset.key)setPath(p.data,e.target.dataset.key,e.target.value);if(e.target.dataset.tkey){const i=+e.target.closest('.touch').dataset.touch;p.data.cadence[i][e.target.dataset.tkey]=e.target.value}if(e.target.dataset.pov){let v=e.target.value;if(e.target.dataset.pov==='talkingPoints')v=lines(v);p.data.pov[e.target.dataset.pov]=v}p.updatedAt=new Date().toISOString();save()});
+  $('#plans').addEventListener('click',async e=>{const b=e.target.closest('[data-action]');if(!b)return;const card=b.closest('.plan'),p=state.plans.find(x=>x.id===card.dataset.id),act=b.dataset.action;if(act==='collapse'){card.querySelector('.plan-body').classList.toggle('hidden');b.textContent=card.querySelector('.plan-body').classList.contains('hidden')?'Expand':'Collapse'}if(act==='copy'){await copyText(planText(p));toast('Plan copied')}if(act==='word')wordExport(p);if(act==='delete'&&confirm(`Delete ${p.input.company}?`)){state.plans=state.plans.filter(x=>x.id!==p.id);save();render()}if(act==='duplicate'){const c=structuredClone(p);c.id=id();c.key=p.key+'copy'+Date.now();c.input.company+=' — Copy';state.plans.unshift(c);save();render()}if(act==='applyFirst'||act==='applyFollow'){const i=act==='applyFirst'?0:Math.min(2,p.data.cadence.length-1);p.data.cadence[i].subject=p.data.pov.emailSubject;p.data.cadence[i].body=p.data.pov.emailBody;save();render();toast('Email applied')}if(act==='regenPov')openPovPrompt(p)});
+  ['search','badgeFilter','routeFilter','icpFilter'].forEach(x=>$('#'+x).addEventListener('input',render));
+  $('#csvExport').onclick=exportCSV;$('#clearBtn').onclick=()=>{if(confirm('Delete all saved account plans from this browser?')){state.plans=[];save();render()}};
+  function fillConfig(){['territories','defunct','manufacturers','srOverrides'].forEach(k=>$('#'+k).value=(state.config[k]||[]).join('\n'))}
+  $('#configBtn').onclick=()=>{fillConfig();$('#configModal').classList.remove('hidden')};$('#closeConfig').onclick=()=>$('#configModal').classList.add('hidden');
+  $('#saveConfig').onclick=()=>{['territories','defunct','manufacturers','srOverrides'].forEach(k=>state.config[k]=lines($('#'+k).value));save();$('#configModal').classList.add('hidden');toast('Rules saved')};
+  $('#showPrompt').onclick=()=>{const v=$('#promptView');v.textContent=contract({company:'Example account'},prequal({company:'Example account'}));v.classList.toggle('hidden')};
+  $('#configModal').onclick=e=>{if(e.target===$('#configModal'))$('#configModal').classList.add('hidden')};
+  $('#copyGPT').onclick=async()=>{await copyText($('#gptPrompt').value);toast('Prompt copied — paste it into ChatGPT')};
+  $('#closeGPT').onclick=()=>{$('#gptModal').classList.add('hidden');if(pendingGPT?.fromBatch){batchQueue=[];batchIndex=0;batchImported=0}pendingGPT=null};
+  $('#skipGPT').onclick=()=>{if(pendingGPT?.fromBatch)nextBatchPrompt();else{$('#gptModal').classList.add('hidden');pendingGPT=null}};
+  $('#importGPT').onclick=()=>{if(!pendingGPT)return;try{const data=extractJSON($('#gptResponse').value);if(pendingGPT.kind==='pov'){if(!data.summary||!Array.isArray(data.talkingPoints))throw Error('PoV JSON is missing required fields');const p=state.plans.find(x=>x.id===pendingGPT.planId);if(!p)throw Error('The account plan is no longer available');p.data.pov=data;p.updatedAt=new Date().toISOString();save();render();$('#gptModal').classList.add('hidden');pendingGPT=null;toast('Persona PoV imported');return}validatePlan(data);const done=commitPlan(pendingGPT.a,pendingGPT.q,data);if(!done)return;$('#singleStatus').innerHTML='<div class="status">Plan imported. Review all facts and sources before use.</div>';if(pendingGPT.fromBatch){batchImported++;nextBatchPrompt()}else{$('#gptModal').classList.add('hidden');pendingGPT=null;toast('Account plan imported')}}catch(err){$('#gptStatus').innerHTML=`<div class="status error">${esc(err.message)}. Paste the complete JSON response from ChatGPT.</div>`}};
+  $('#gptModal').onclick=e=>{if(e.target===$('#gptModal'))$('#closeGPT').click()};
+  render();
+})();
+</script>
+</body>
+</html>
